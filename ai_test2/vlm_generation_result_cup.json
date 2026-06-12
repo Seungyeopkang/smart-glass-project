@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "caption": "흰색 타원형 책상 위에 아이맥과 키보드, 마우스가 놓여 있고 회색 사무용 의자가 배치된 깔끔한 작업 공간입니다.",
+    "sceneSummary": "아이맥이 놓인 현대적인 화이트 톤 홈 오피스",
+    "detectedObjects": [
+      "아이맥",
+      "키보드",
+      "마우스",
+      "사무용 의자",
+      "커피 컵",
+      "노트",
+      "연필",
+      "장식용 오브제"
+    ],
+    "tags": [
+      "홈오피스",
+      "데스크테리어",
+      "아이맥",
+      "미니멀리즘",
+      "작업실"
+    ],
+    "ocrText": null,
+    "positionHint": "책상 중앙에 위치한 초록색 아이맥이 가장 눈에 띕니다.",
+    "location": "사무실"
+  },
+  "elapsed_sec": 40.1293,
+  "peak_memory_mb": 0.0,
+  "load_time_sec": 0.0,
+  "provider": "ollama",
+  "model_id": "gemma4:31b-cloud",
+  "model_key": "gemma4:31b-cloud",
+  "device": "external-ollama",
+  "quantization": "none",
+  "prompt": "You are a helpful assistant. Always respond in Korean. Output valid JSON only. No code blocks.\n\n이미지를 분석하여 다음 JSON 형식으로 출력하세요. 설명 없이 JSON만 출력하세요.\n\n{\n  \"caption\": \"사진 전체에 대한 한 문장 설명\",\n  \"sceneSummary\": \"전체 장면 10단어 이내 요약\",\n  \"location\": \"공간 유형 (예: 거실, 카페, 사무실)\",\n  \"detectedObjects\": [\"물체1\", \"물체2\"],\n  \"objects\": [\n    {\n      \"name\": \"물체명 (가장 구체적인 이름)\",\n      \"positionHint\": \"주변 물체 기준 상대적 위치 (예: 맥북 오른쪽, 아이폰 아래)\",\n      \"surface\": \"놓인 표면 또는 기준 물체. 예: 맥북 위, 테이블 위 왼쪽. 절대 비워두지 말 것\",\n      \"nearbyObjects\": [\"주변 물체1\", \"주변 물체2\"]\n    }\n  ],\n  \"tags\": [\"검색용 태그 키워드들\"],\n  \"ocrText\": \"보이는 텍스트가 있다면 기록, 없으면 null\",\n  \"positionHint\": \"가장 찾기 쉬운 메인 물체의 종합적 위치 단서\"\n}\n\n규칙:\n- 작거나 부분만 보여도 포함\n- 브랜드 제품은 브랜드명 포함 (예: AirPods, 맥북, 아이패드, Apple Pencil)\n- 태블릿/스마트패드/아이패드도 반드시 포함\n- 같은 종류가 여러 개면 모두 포함 (예: AirPods 케이스가 2개면 \"AirPods 케이스 1\", \"AirPods 케이스 2\")\n- 가구/벽/바닥 제외\n- JSON만 출력\n- 반드시 한국어로",
+  "system_prompt": null,
+  "raw_output_text": "{\n  \"caption\": \"흰색 타원형 책상 위에 아이맥과 키보드, 마우스가 놓여 있고 회색 사무용 의자가 배치된 깔끔한 작업 공간입니다.\",\n  \"sceneSummary\": \"아이맥이 놓인 현대적인 화이트 톤 홈 오피스\",\n  \"location\": \"사무실\",\n  \"detectedObjects\": [\"아이맥\", \"키보드\", \"마우스\", \"사무용 의자\", \"커피 컵\", \"노트\", \"연필\", \"장식용 오브제\"],\n  \"objects\": [\n    {\n      \"name\": \"아이맥\",\n      \"positionHint\": \"책상 오른쪽 중앙\",\n      \"surface\": \"책상 위\",\n      \"nearbyObjects\": [\"키보드\", \"커피 컵\", \"장식용 오브제\"]\n    },\n    {\n      \"name\": \"키보드\",\n      \"positionHint\": \"아이맥 앞쪽\",\n      \"surface\": \"책상 위\",\n      \"nearbyObjects\": [\"아이맥\", \"마우스\"]\n    },\n    {\n      \"name\": \"마우스\",\n      \"positionHint\": \"키보드 왼쪽\",\n      \"surface\": \"책상 위\",\n      \"nearbyObjects\": [\"키보드\", \"노트\"]\n    },\n    {\n      \"name\": \"사무용 의자\",\n      \"positionHint\": \"책상 왼쪽 뒤편\",\n      \"surface\": \"바닥 위\",\n      \"nearbyObjects\": [\"책상\"]\n    },\n    {\n      \"name\": \"커피 컵\",\n      \"positionHint\": \"아이맥 뒤쪽 왼쪽\",\n      \"surface\": \"책상 위\",\n      \"nearbyObjects\": [\"아이맥\", \"노트\"]\n    },\n    {\n      \"name\": \"노트\",\n      \"positionHint\": \"마우스 왼쪽 아래\",\n      \"surface\": \"책상 위\",\n      \"nearbyObjects\": [\"마우스\", \"연필\"]\n    },\n    {\n      \"name\": \"연필\",\n      \"positionHint\": \"노트 위\",\n      \"surface\": \"노트 위\",\n      \"nearbyObjects\": [\"노트\"]\n    },\n    {\n      \"name\": \"장식용 오브제\",\n      \"positionHint\": \"아이맥 오른쪽\",\n      \"surface\": \"책상 위\",\n      \"nearbyObjects\": [\"아이맥\"]\n    }\n  ],\n  \"tags\": [\"홈오피스\", \"데스크테리어\", \"아이맥\", \"미니멀리즘\", \"작업실\"],\n  \"ocrText\": null,\n  \"positionHint\": \"책상 중앙에 위치한 초록색 아이맥이 가장 눈에 띕니다.\"\n}",
+  "objects": [
+    {
+      "object_id": 1,
+      "name": "아이맥",
+      "position": {
+        "hint": "책상 오른쪽 중앙",
+        "surface": "책상 위"
+      },
+      "nearby_objects": [
+        "키보드",
+        "커피 컵",
+        "장식용 오브제"
+      ]
+    },
+    {
+      "object_id": 2,
+      "name": "키보드",
+      "position": {
+        "hint": "아이맥 앞쪽",
+        "surface": "책상 위"
+      },
+      "nearby_objects": [
+        "아이맥",
+        "마우스"
+      ]
+    },
+    {
+      "object_id": 3,
+      "name": "마우스",
+      "position": {
+        "hint": "키보드 왼쪽",
+        "surface": "책상 위"
+      },
+      "nearby_objects": [
+        "키보드",
+        "노트"
+      ]
+    },
+    {
+      "object_id": 4,
+      "name": "사무용 의자",
+      "position": {
+        "hint": "책상 왼쪽 뒤편",
+        "surface": "바닥 위"
+      },
+      "nearby_objects": [
+        "책상"
+      ]
+    },
+    {
+      "object_id": 5,
+      "name": "커피 컵",
+      "position": {
+        "hint": "아이맥 뒤쪽 왼쪽",
+        "surface": "책상 위"
+      },
+      "nearby_objects": [
+        "아이맥",
+        "노트"
+      ]
+    },
+    {
+      "object_id": 6,
+      "name": "노트",
+      "position": {
+        "hint": "마우스 왼쪽 아래",
+        "surface": "책상 위"
+      },
+      "nearby_objects": [
+        "마우스",
+        "연필"
+      ]
+    },
+    {
+      "object_id": 7,
+      "name": "연필",
+      "position": {
+        "hint": "노트 위",
+        "surface": "노트 위"
+      },
+      "nearby_objects": [
+        "노트"
+      ]
+    },
+    {
+      "object_id": 8,
+      "name": "장식용 오브제",
+      "position": {
+        "hint": "아이맥 오른쪽",
+        "surface": "책상 위"
+      },
+      "nearby_objects": [
+        "아이맥"
+      ]
+    }
+  ],
+  "scene_info": {
+    "summary": "흰색 타원형 책상 위에 아이맥과 키보드, 마우스가 놓여 있고 회색 사무용 의자가 배치된 깔끔한 작업 공간입니다."
+  },
+  "pipeline_output": {
+    "capture_id": "ollama-340303144",
+    "timestamp": "2026-06-01T06:33:47.868324346Z",
+    "objects": [
+      {
+        "object_id": 1,
+        "name": "아이맥",
+        "position": {
+          "hint": "책상 오른쪽 중앙",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "키보드",
+          "커피 컵",
+          "장식용 오브제"
+        ]
+      },
+      {
+        "object_id": 2,
+        "name": "키보드",
+        "position": {
+          "hint": "아이맥 앞쪽",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "아이맥",
+          "마우스"
+        ]
+      },
+      {
+        "object_id": 3,
+        "name": "마우스",
+        "position": {
+          "hint": "키보드 왼쪽",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "키보드",
+          "노트"
+        ]
+      },
+      {
+        "object_id": 4,
+        "name": "사무용 의자",
+        "position": {
+          "hint": "책상 왼쪽 뒤편",
+          "surface": "바닥 위"
+        },
+        "nearby_objects": [
+          "책상"
+        ]
+      },
+      {
+        "object_id": 5,
+        "name": "커피 컵",
+        "position": {
+          "hint": "아이맥 뒤쪽 왼쪽",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "아이맥",
+          "노트"
+        ]
+      },
+      {
+        "object_id": 6,
+        "name": "노트",
+        "position": {
+          "hint": "마우스 왼쪽 아래",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "마우스",
+          "연필"
+        ]
+      },
+      {
+        "object_id": 7,
+        "name": "연필",
+        "position": {
+          "hint": "노트 위",
+          "surface": "노트 위"
+        },
+        "nearby_objects": [
+          "노트"
+        ]
+      },
+      {
+        "object_id": 8,
+        "name": "장식용 오브제",
+        "position": {
+          "hint": "아이맥 오른쪽",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "아이맥"
+        ]
+      }
+    ],
+    "inference_time": 40.129,
+    "done_reason": "stop"
+  },
+  "pipeline_mode": "ollama_adapter"
+}

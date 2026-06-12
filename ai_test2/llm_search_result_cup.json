@@ -1,0 +1,91 @@
+{
+  "answer": "음, 커피 컵이 아이맥 뒤쪽 왼쪽, 그러니까 책상 위에 있대. 혹시 다른 컵을 찾고 있어?",
+  "answerMode": "gemma3_3stage",
+  "query": "내 컵 어디있지?",
+  "totalHits": 1,
+  "hits": [
+    {
+      "memoryId": "ai-test2-memory-001",
+      "score": 0.118182,
+      "lexicalScore": 0.118182,
+      "matchedTerms": [
+        "커피",
+        "컵"
+      ],
+      "imageKey": "ai_test2/image.png",
+      "imageUrl": null,
+      "capturedAt": "2026-06-01T06:33:11Z",
+      "caption": "흰색 타원형 책상 위에 아이맥과 키보드, 마우스가 놓여 있고 회색 사무용 의자가 배치된 깔끔한 작업 공간입니다.",
+      "sceneSummary": "아이맥이 놓인 현대적인 화이트 톤 홈 오피스",
+      "positionHint": "책상 중앙에 위치한 초록색 아이맥이 가장 눈에 띕니다.",
+      "location": {
+        "name": null,
+        "address": null,
+        "latitude": null,
+        "longitude": null
+      },
+      "detectedObjects": [
+        "아이맥",
+        "키보드",
+        "마우스",
+        "사무용 의자",
+        "커피 컵",
+        "노트",
+        "연필",
+        "장식용 오브제"
+      ],
+      "tags": [
+        "홈오피스",
+        "데스크테리어",
+        "아이맥",
+        "미니멀리즘",
+        "작업실",
+        "키보드",
+        "마우스",
+        "사무용 의자",
+        "커피 컵",
+        "노트",
+        "연필",
+        "장식용 오브제",
+        "책상 오른쪽 중앙",
+        "책상 위",
+        "아이맥 앞쪽",
+        "키보드 왼쪽",
+        "책상",
+        "책상 왼쪽 뒤편",
+        "바닥 위",
+        "아이맥 뒤쪽 왼쪽",
+        "마우스 왼쪽 아래",
+        "노트 위",
+        "아이맥 오른쪽"
+      ]
+    }
+  ],
+  "citedMemoryIds": [
+    "ai-test2-memory-001"
+  ],
+  "confidence": 0.12,
+  "reason": "Qwen 3-stage pipeline: intent=컵, expanded_terms=11, hits=1",
+  "_pipeline": {
+    "stage1_intent": {
+      "target_object": "컵",
+      "intent_summary": "사용자가 현재 위치한 곳에서 컵을 찾고 있습니다."
+    },
+    "stage2_expansion": {
+      "expanded_terms": [
+        "컵",
+        "커피잔",
+        "머그컵",
+        "찻잔",
+        "텀블러",
+        "머그",
+        "커피",
+        "음료",
+        "컵홀더",
+        "다기",
+        "잔"
+      ]
+    },
+    "model": "gemma3:4b-cloud"
+  }
+}

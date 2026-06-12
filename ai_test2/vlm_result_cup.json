@@ -1,0 +1,157 @@
+{
+  "status": "success",
+  "requestId": "ai-test2-request-001",
+  "taskType": "caption",
+  "memoryId": "ai-test2-memory-001",
+  "userId": "ai-test2-user",
+  "capturedAt": "2026-06-01T06:33:11Z",
+  "sourceImage": {
+    "imageKey": "ai_test2/image.png",
+    "imageUrl": null,
+    "contentType": "image/jpeg"
+  },
+  "metadata": {
+    "caption": "흰색 타원형 책상 위에 아이맥과 키보드, 마우스가 놓여 있고 회색 사무용 의자가 배치된 깔끔한 작업 공간입니다.",
+    "sceneSummary": "아이맥이 놓인 현대적인 화이트 톤 홈 오피스",
+    "detectedObjects": [
+      "아이맥",
+      "키보드",
+      "마우스",
+      "사무용 의자",
+      "커피 컵",
+      "노트",
+      "연필",
+      "장식용 오브제"
+    ],
+    "tags": [
+      "홈오피스",
+      "데스크테리어",
+      "아이맥",
+      "미니멀리즘",
+      "작업실"
+    ],
+    "ocrText": null,
+    "positionHint": "책상 중앙에 위치한 초록색 아이맥이 가장 눈에 띕니다.",
+    "location": null
+  },
+  "pipelineOutput": {
+    "capture_id": "ollama-340303144",
+    "timestamp": "2026-06-01T06:33:47.868324346Z",
+    "objects": [
+      {
+        "object_id": 1,
+        "name": "아이맥",
+        "position": {
+          "hint": "책상 오른쪽 중앙",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "키보드",
+          "커피 컵",
+          "장식용 오브제"
+        ]
+      },
+      {
+        "object_id": 2,
+        "name": "키보드",
+        "position": {
+          "hint": "아이맥 앞쪽",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "아이맥",
+          "마우스"
+        ]
+      },
+      {
+        "object_id": 3,
+        "name": "마우스",
+        "position": {
+          "hint": "키보드 왼쪽",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "키보드",
+          "노트"
+        ]
+      },
+      {
+        "object_id": 4,
+        "name": "사무용 의자",
+        "position": {
+          "hint": "책상 왼쪽 뒤편",
+          "surface": "바닥 위"
+        },
+        "nearby_objects": [
+          "책상"
+        ]
+      },
+      {
+        "object_id": 5,
+        "name": "커피 컵",
+        "position": {
+          "hint": "아이맥 뒤쪽 왼쪽",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "아이맥",
+          "노트"
+        ]
+      },
+      {
+        "object_id": 6,
+        "name": "노트",
+        "position": {
+          "hint": "마우스 왼쪽 아래",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "마우스",
+          "연필"
+        ]
+      },
+      {
+        "object_id": 7,
+        "name": "연필",
+        "position": {
+          "hint": "노트 위",
+          "surface": "노트 위"
+        },
+        "nearby_objects": [
+          "노트"
+        ]
+      },
+      {
+        "object_id": 8,
+        "name": "장식용 오브제",
+        "position": {
+          "hint": "아이맥 오른쪽",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "아이맥"
+        ]
+      }
+    ],
+    "inference_time": 40.129,
+    "done_reason": "stop"
+  },
+  "providerMetadata": {
+    "modelKey": "gemma4:31b-cloud",
+    "modelId": "gemma4:31b-cloud",
+    "modelFamily": null,
+    "quantization": "none",
+    "dtype": "float16",
+    "provider": "ollama",
+    "capabilities": null,
+    "executionPolicy": null,
+    "raw": null
+  },
+  "runtime": {
+    "latencySec": 40.1293,
+    "peakMemoryMb": 0.0,
+    "loadTimeSec": 0.0,
+    "modelInferenceSec": 40.1293,
+    "taskLatencySec": 40.1293
+  }
+}
