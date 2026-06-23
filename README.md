@@ -136,8 +136,8 @@ Continuous Integration is managed via GitHub Actions (`.github/workflows/ci.yml`
 
 *   **Smart Memory Team** - Kyonggi University (2026 Capstone Design)
     *   Seungyeop Kang (Team Leader, AI/VLM)
-    *   Jisung Hong (Glass Hardware)
+    *   Jisung Hong (Pipeline)
     *   Kwanho Park (Infrastructure/Inference)
-    *   Yongbin Kim (LLM/Chat Pipeline)
+    *   Yongbin Kim (Backend)
     *   Junhwi Kim (Web/App)
     *   Seoyoung Ji (Design)
