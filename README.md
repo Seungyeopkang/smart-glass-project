@@ -6,6 +6,8 @@ This repository contains the monorepo for the Smart Memory project, which encomp
 
 ## 1. Project Overview
 
+![Chatbot Result Preview](figures/chatbot_result.png)
+
 Modern individuals frequently experience cognitive overload, leading to misplaced items (e.g., wallets, glasses, keys). Smart Memory provides a continuous visual logging solution using a smart-glass form factor. 
 
 To overcome the hardware limitations of wearable devices (such as battery life and thermal constraints), this project implements an optimized edge-to-cloud architecture:
@@ -23,11 +25,16 @@ To overcome the hardware limitations of wearable devices (such as battery life a
 
 ## 3. System Architecture
 
+![System Architecture Diagram](figures/system_architecture.png)
+
 The architecture is systematically divided into three main layers:
 
 1.  **View Layer:**
     *   `smart-glass-client`: React Native (Expo) app and smart-glass simulator for image capture and chat.
     *   `admin-web`: React/Vite dashboard for system monitoring and latency statistics.
+    
+    *Admin Dashboard Preview:*
+    ![Admin Dashboard Preview](figures/admin_dashboard.png)
 2.  **Controller Layer:**
     *   `api-server`: FastAPI-based gateway for handling authorization, Presigned URL issuance, search routing, and PostgreSQL memory persistence.
 3.  **Model Layer:**
