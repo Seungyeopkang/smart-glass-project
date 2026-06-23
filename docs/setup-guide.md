@@ -90,8 +90,8 @@ printf "nameserver 1.1.1.1\nnameserver 8.8.8.8\n" | sudo tee /etc/resolv.conf
 ```env
 API_LLM_OLLAMA_API_KEY=...
 API_LLM_OLLAMA_BASE_URL=https://ollama.com/api
-API_LLM_OLLAMA_MODEL=gpt-oss:20b-cloud
-OLLAMA_VLM_MODEL=gemma3:12b
+API_LLM_OLLAMA_MODEL=gemma3:4b-cloud
+OLLAMA_VLM_MODEL=gemma4:31b-cloud
 ```
 
 저장소 최상단(루트)에서 배포를 시작합니다:
