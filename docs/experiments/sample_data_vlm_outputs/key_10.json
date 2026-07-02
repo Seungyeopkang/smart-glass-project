@@ -1,0 +1,181 @@
+{
+  "metadata": {
+    "caption": "컴퓨터 모니터와 키보드, 스피커가 놓인 책상 위 풍경입니다.",
+    "sceneSummary": "모니터와 주변기기가 배치된 컴퓨터 책상",
+    "detectedObjects": [
+      "모니터",
+      "키보드",
+      "스피커",
+      "모니터 받침대",
+      "멀티탭",
+      "물티슈"
+    ],
+    "tags": [
+      "데스크테리어",
+      "컴퓨터",
+      "모니터",
+      "스피커",
+      "작업공간"
+    ],
+    "ocrText": "STEALTH",
+    "positionHint": "책상 중앙에 위치한 모니터와 그 아래의 스피커",
+    "location": "방"
+  },
+  "elapsed_sec": 30.6648,
+  "peak_memory_mb": 0.0,
+  "load_time_sec": 0.0,
+  "provider": "ollama",
+  "model_id": "gemma4:31b-cloud",
+  "model_key": "gemma4:31b-cloud",
+  "device": "external-ollama",
+  "quantization": "none",
+  "prompt": "You are a helpful assistant. Always respond in Korean. Output valid JSON only. No code blocks.\n\n이미지를 분석하여 다음 JSON 형식으로 출력하세요. 설명 없이 JSON만 출력하세요.\n\n{\n  \"caption\": \"사진 전체에 대한 한 문장 설명\",\n  \"sceneSummary\": \"전체 장면 10단어 이내 요약\",\n  \"location\": \"공간 유형 (예: 거실, 카페, 사무실)\",\n  \"detectedObjects\": [\"물체1\", \"물체2\"],\n  \"objects\": [\n    {\n      \"name\": \"물체명 (가장 구체적인 이름)\",\n      \"positionHint\": \"주변 물체 기준 상대적 위치 (예: 맥북 오른쪽, 아이폰 아래)\",\n      \"surface\": \"놓인 표면 또는 기준 물체. 예: 맥북 위, 테이블 위 왼쪽. 절대 비워두지 말 것\",\n      \"nearbyObjects\": [\"주변 물체1\", \"주변 물체2\"]\n    }\n  ],\n  \"tags\": [\"검색용 태그 키워드들\"],\n  \"ocrText\": \"보이는 텍스트가 있다면 기록, 없으면 null\",\n  \"positionHint\": \"가장 찾기 쉬운 메인 물체의 종합적 위치 단서\"\n}\n\n규칙:\n- 작거나 부분만 보여도 포함\n- 브랜드 제품은 브랜드명 포함 (예: AirPods, 맥북, 아이패드, Apple Pencil)\n- 태블릿/스마트패드/아이패드도 반드시 포함\n- 같은 종류가 여러 개면 모두 포함 (예: AirPods 케이스가 2개면 \"AirPods 케이스 1\", \"AirPods 케이스 2\")\n- 가구/벽/바닥 제외\n- JSON만 출력\n- 반드시 한국어로",
+  "system_prompt": null,
+  "raw_output_text": "{\n  \"caption\": \"컴퓨터 모니터와 키보드, 스피커가 놓인 책상 위 풍경입니다.\",\n  \"sceneSummary\": \"모니터와 주변기기가 배치된 컴퓨터 책상\",\n  \"location\": \"방\",\n  \"detectedObjects\": [\"모니터\", \"키보드\", \"스피커\", \"모니터 받침대\", \"멀티탭\", \"물티슈\"],\n  \"objects\": [\n    {\n      \"name\": \"모니터\",\n      \"positionHint\": \"책상 중앙 상단\",\n      \"surface\": \"모니터 받침대 위\",\n      \"nearbyObjects\": [\"모니터 받침대\", \"멀티탭\"]\n    },\n    {\n      \"name\": \"키보드\",\n      \"positionHint\": \"모니터 왼쪽 아래\",\n      \"surface\": \"책상 위\",\n      \"nearbyObjects\": [\"모니터 받침대\"]\n    },\n    {\n      \"name\": \"스피커\",\n      \"positionHint\": \"책상 아래 중앙\",\n      \"surface\": \"바닥 위\",\n      \"nearbyObjects\": [\"책상\"]\n    },\n    {\n      \"name\": \"모니터 받침대\",\n      \"positionHint\": \"모니터 아래\",\n      \"surface\": \"책상 위\",\n      \"nearbyObjects\": [\"모니터\", \"키보드\"]\n    },\n    {\n      \"name\": \"멀티탭\",\n      \"positionHint\": \"모니터 받침대 뒤쪽\",\n      \"surface\": \"모니터 받침대 위\",\n      \"nearbyObjects\": [\"모니터\"]\n    },\n    {\n      \"name\": \"물티슈\",\n      \"positionHint\": \"책상 오른쪽 끝\",\n      \"surface\": \"책상 위\",\n      \"nearbyObjects\": []\n    }\n  ],\n  \"tags\": [\"데스크테리어\", \"컴퓨터\", \"모니터\", \"스피커\", \"작업공간\"],\n  \"ocrText\": \"STEALTH\",\n  \"positionHint\": \"책상 중앙에 위치한 모니터와 그 아래의 스피커\"\n}",
+  "objects": [
+    {
+      "object_id": 1,
+      "name": "모니터",
+      "position": {
+        "hint": "책상 중앙 상단",
+        "surface": "모니터 받침대 위"
+      },
+      "nearby_objects": [
+        "모니터 받침대",
+        "멀티탭"
+      ]
+    },
+    {
+      "object_id": 2,
+      "name": "키보드",
+      "position": {
+        "hint": "모니터 왼쪽 아래",
+        "surface": "책상 위"
+      },
+      "nearby_objects": [
+        "모니터 받침대"
+      ]
+    },
+    {
+      "object_id": 3,
+      "name": "스피커",
+      "position": {
+        "hint": "책상 아래 중앙",
+        "surface": "바닥 위"
+      },
+      "nearby_objects": [
+        "책상"
+      ]
+    },
+    {
+      "object_id": 4,
+      "name": "모니터 받침대",
+      "position": {
+        "hint": "모니터 아래",
+        "surface": "책상 위"
+      },
+      "nearby_objects": [
+        "모니터",
+        "키보드"
+      ]
+    },
+    {
+      "object_id": 5,
+      "name": "멀티탭",
+      "position": {
+        "hint": "모니터 받침대 뒤쪽",
+        "surface": "모니터 받침대 위"
+      },
+      "nearby_objects": [
+        "모니터"
+      ]
+    },
+    {
+      "object_id": 6,
+      "name": "물티슈",
+      "position": {
+        "hint": "책상 오른쪽 끝",
+        "surface": "책상 위"
+      },
+      "nearby_objects": []
+    }
+  ],
+  "scene_info": {
+    "summary": "컴퓨터 모니터와 키보드, 스피커가 놓인 책상 위 풍경입니다."
+  },
+  "pipeline_output": {
+    "capture_id": "ollama-454728125",
+    "timestamp": "2026-07-02T14:28:15.00220372Z",
+    "objects": [
+      {
+        "object_id": 1,
+        "name": "모니터",
+        "position": {
+          "hint": "책상 중앙 상단",
+          "surface": "모니터 받침대 위"
+        },
+        "nearby_objects": [
+          "모니터 받침대",
+          "멀티탭"
+        ]
+      },
+      {
+        "object_id": 2,
+        "name": "키보드",
+        "position": {
+          "hint": "모니터 왼쪽 아래",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "모니터 받침대"
+        ]
+      },
+      {
+        "object_id": 3,
+        "name": "스피커",
+        "position": {
+          "hint": "책상 아래 중앙",
+          "surface": "바닥 위"
+        },
+        "nearby_objects": [
+          "책상"
+        ]
+      },
+      {
+        "object_id": 4,
+        "name": "모니터 받침대",
+        "position": {
+          "hint": "모니터 아래",
+          "surface": "책상 위"
+        },
+        "nearby_objects": [
+          "모니터",
+          "키보드"
+        ]
+      },
+      {
+        "object_id": 5,
+        "name": "멀티탭",
+        "position": {
+          "hint": "모니터 받침대 뒤쪽",
+          "surface": "모니터 받침대 위"
+        },
+        "nearby_objects": [
+          "모니터"
+        ]
+      },
+      {
+        "object_id": 6,
+        "name": "물티슈",
+        "position": {
+          "hint": "책상 오른쪽 끝",
+          "surface": "책상 위"
+        },
+        "nearby_objects": []
+      }
+    ],
+    "inference_time": 30.665,
+    "done_reason": "stop"
+  },
+  "pipeline_mode": "ollama_adapter"
+}

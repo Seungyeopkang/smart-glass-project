@@ -1,0 +1,74 @@
+{
+  "dataset": {
+    "vlm_samples": 2,
+    "llm_search_samples": 2,
+    "note": "Pilot evaluation based on existing sample artifacts under ai_test2/."
+  },
+  "vlm": {
+    "json_parse_success_rate_pct": 100.0,
+    "avg_objects_per_image": 7.0,
+    "total_objects": 14,
+    "surface_coverage_pct": 100.0,
+    "position_hint_coverage_pct": 100.0,
+    "nearby_object_coverage_pct": 100.0,
+    "nearby_relation_count": 25,
+    "avg_inference_time_sec": 35.567
+  },
+  "llm": {
+    "queries_with_hits_pct": 100.0,
+    "grounded_answer_rate_pct": 100.0,
+    "avg_expanded_terms": 12.5,
+    "avg_hits_per_query": 1.0,
+    "avg_confidence": 0.26
+  },
+  "samples": {
+    "vlm": [
+      {
+        "file": "ai_test2\\vlm_generation_result.json",
+        "model": "gemma4:31b-cloud",
+        "object_count": 6,
+        "detected_object_count": 6,
+        "inference_time_sec": 31.005,
+        "valid_json": true,
+        "objects_with_surface": 6,
+        "objects_with_nearby_objects": 6,
+        "objects_with_position_hint": 6,
+        "nearby_relation_count": 11
+      },
+      {
+        "file": "ai_test2\\vlm_generation_result_cup.json",
+        "model": "gemma4:31b-cloud",
+        "object_count": 8,
+        "detected_object_count": 8,
+        "inference_time_sec": 40.1293,
+        "valid_json": true,
+        "objects_with_surface": 8,
+        "objects_with_nearby_objects": 8,
+        "objects_with_position_hint": 8,
+        "nearby_relation_count": 14
+      }
+    ],
+    "llm": [
+      {
+        "file": "ai_test2\\llm_search_result.json",
+        "query": "스마트폰 어딨어?",
+        "answer_mode": "gemma3_3stage",
+        "total_hits": 1,
+        "confidence": 0.4,
+        "expanded_term_count": 14,
+        "cited_memory_count": 1,
+        "has_grounded_answer": true
+      },
+      {
+        "file": "ai_test2\\llm_search_result_cup.json",
+        "query": "내 컵 어디있지?",
+        "answer_mode": "gemma3_3stage",
+        "total_hits": 1,
+        "confidence": 0.12,
+        "expanded_term_count": 11,
+        "cited_memory_count": 1,
+        "has_grounded_answer": true
+      }
+    ]
+  }
+}

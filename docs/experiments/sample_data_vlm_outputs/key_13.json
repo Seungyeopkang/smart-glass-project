@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "caption": "밝은 색상의 벽과 나무 바닥이 있는 방 안에 회색의 현대적인 디자인 의자가 놓여 있습니다.",
+    "sceneSummary": "방 안의 회색 디자인 의자",
+    "detectedObjects": [
+      "디자인 의자",
+      "바구니",
+      "비닐봉지"
+    ],
+    "tags": [
+      "가구",
+      "의자",
+      "인테리어",
+      "회색의자",
+      "실내"
+    ],
+    "ocrText": null,
+    "positionHint": "화면 중앙에 위치한 회색 디자인 의자",
+    "location": "방"
+  },
+  "elapsed_sec": 17.1401,
+  "peak_memory_mb": 0.0,
+  "load_time_sec": 0.0,
+  "provider": "ollama",
+  "model_id": "gemma4:31b-cloud",
+  "model_key": "gemma4:31b-cloud",
+  "device": "external-ollama",
+  "quantization": "none",
+  "prompt": "You are a helpful assistant. Always respond in Korean. Output valid JSON only. No code blocks.\n\n이미지를 분석하여 다음 JSON 형식으로 출력하세요. 설명 없이 JSON만 출력하세요.\n\n{\n  \"caption\": \"사진 전체에 대한 한 문장 설명\",\n  \"sceneSummary\": \"전체 장면 10단어 이내 요약\",\n  \"location\": \"공간 유형 (예: 거실, 카페, 사무실)\",\n  \"detectedObjects\": [\"물체1\", \"물체2\"],\n  \"objects\": [\n    {\n      \"name\": \"물체명 (가장 구체적인 이름)\",\n      \"positionHint\": \"주변 물체 기준 상대적 위치 (예: 맥북 오른쪽, 아이폰 아래)\",\n      \"surface\": \"놓인 표면 또는 기준 물체. 예: 맥북 위, 테이블 위 왼쪽. 절대 비워두지 말 것\",\n      \"nearbyObjects\": [\"주변 물체1\", \"주변 물체2\"]\n    }\n  ],\n  \"tags\": [\"검색용 태그 키워드들\"],\n  \"ocrText\": \"보이는 텍스트가 있다면 기록, 없으면 null\",\n  \"positionHint\": \"가장 찾기 쉬운 메인 물체의 종합적 위치 단서\"\n}\n\n규칙:\n- 작거나 부분만 보여도 포함\n- 브랜드 제품은 브랜드명 포함 (예: AirPods, 맥북, 아이패드, Apple Pencil)\n- 태블릿/스마트패드/아이패드도 반드시 포함\n- 같은 종류가 여러 개면 모두 포함 (예: AirPods 케이스가 2개면 \"AirPods 케이스 1\", \"AirPods 케이스 2\")\n- 가구/벽/바닥 제외\n- JSON만 출력\n- 반드시 한국어로",
+  "system_prompt": null,
+  "raw_output_text": "{\n  \"caption\": \"밝은 색상의 벽과 나무 바닥이 있는 방 안에 회색의 현대적인 디자인 의자가 놓여 있습니다.\",\n  \"sceneSummary\": \"방 안의 회색 디자인 의자\",\n  \"location\": \"방\",\n  \"detectedObjects\": [\"디자인 의자\", \"바구니\", \"비닐봉지\"],\n  \"objects\": [\n    {\n      \"name\": \"디자인 의자\",\n      \"positionHint\": \"바구니 위쪽 및 비닐봉지 오른쪽\",\n      \"surface\": \"나무 바닥 위\",\n      \"nearbyObjects\": [\"바구니\", \"비닐봉지\"]\n    },\n    {\n      \"name\": \"바구니\",\n      \"positionHint\": \"디자인 의자 아래쪽\",\n      \"surface\": \"나무 바닥 위\",\n      \"nearbyObjects\": [\"디자인 의자\"]\n    },\n    {\n      \"name\": \"비닐봉지\",\n      \"positionHint\": \"디자인 의자 왼쪽\",\n      \"surface\": \"나무 바닥 위\",\n      \"nearbyObjects\": [\"디자인 의자\"]\n    }\n  ],\n  \"tags\": [\"가구\", \"의자\", \"인테리어\", \"회색의자\", \"실내\"],\n  \"ocrText\": null,\n  \"positionHint\": \"화면 중앙에 위치한 회색 디자인 의자\"\n}",
+  "objects": [
+    {
+      "object_id": 1,
+      "name": "디자인 의자",
+      "position": {
+        "hint": "바구니 위쪽 및 비닐봉지 오른쪽",
+        "surface": "나무 바닥 위"
+      },
+      "nearby_objects": [
+        "바구니",
+        "비닐봉지"
+      ]
+    },
+    {
+      "object_id": 2,
+      "name": "바구니",
+      "position": {
+        "hint": "디자인 의자 아래쪽",
+        "surface": "나무 바닥 위"
+      },
+      "nearby_objects": [
+        "디자인 의자"
+      ]
+    },
+    {
+      "object_id": 3,
+      "name": "비닐봉지",
+      "position": {
+        "hint": "디자인 의자 왼쪽",
+        "surface": "나무 바닥 위"
+      },
+      "nearby_objects": [
+        "디자인 의자"
+      ]
+    }
+  ],
+  "scene_info": {
+    "summary": "밝은 색상의 벽과 나무 바닥이 있는 방 안에 회색의 현대적인 디자인 의자가 놓여 있습니다."
+  },
+  "pipeline_output": {
+    "capture_id": "ollama-454803227",
+    "timestamp": "2026-07-02T14:29:16.575849712Z",
+    "objects": [
+      {
+        "object_id": 1,
+        "name": "디자인 의자",
+        "position": {
+          "hint": "바구니 위쪽 및 비닐봉지 오른쪽",
+          "surface": "나무 바닥 위"
+        },
+        "nearby_objects": [
+          "바구니",
+          "비닐봉지"
+        ]
+      },
+      {
+        "object_id": 2,
+        "name": "바구니",
+        "position": {
+          "hint": "디자인 의자 아래쪽",
+          "surface": "나무 바닥 위"
+        },
+        "nearby_objects": [
+          "디자인 의자"
+        ]
+      },
+      {
+        "object_id": 3,
+        "name": "비닐봉지",
+        "position": {
+          "hint": "디자인 의자 왼쪽",
+          "surface": "나무 바닥 위"
+        },
+        "nearby_objects": [
+          "디자인 의자"
+        ]
+      }
+    ],
+    "inference_time": 17.14,
+    "done_reason": "stop"
+  },
+  "pipeline_mode": "ollama_adapter"
+}

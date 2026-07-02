@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "caption": "밝은 톤의 나무 테이블 위에 식물 잎과 고양이의 꼬리 부분이 보입니다.",
+    "sceneSummary": "나무 테이블 위의 식물과 고양이",
+    "detectedObjects": [
+      "식물",
+      "고양이"
+    ],
+    "tags": [
+      "인테리어",
+      "반려동물",
+      "식물",
+      "미니멀"
+    ],
+    "ocrText": null,
+    "positionHint": "화면 하단의 나무 테이블 위 양 끝에 식물과 고양이가 위치함",
+    "location": "거실"
+  },
+  "elapsed_sec": 19.1948,
+  "peak_memory_mb": 0.0,
+  "load_time_sec": 0.0,
+  "provider": "ollama",
+  "model_id": "gemma4:31b-cloud",
+  "model_key": "gemma4:31b-cloud",
+  "device": "external-ollama",
+  "quantization": "none",
+  "prompt": "You are a helpful assistant. Always respond in Korean. Output valid JSON only. No code blocks.\n\n이미지를 분석하여 다음 JSON 형식으로 출력하세요. 설명 없이 JSON만 출력하세요.\n\n{\n  \"caption\": \"사진 전체에 대한 한 문장 설명\",\n  \"sceneSummary\": \"전체 장면 10단어 이내 요약\",\n  \"location\": \"공간 유형 (예: 거실, 카페, 사무실)\",\n  \"detectedObjects\": [\"물체1\", \"물체2\"],\n  \"objects\": [\n    {\n      \"name\": \"물체명 (가장 구체적인 이름)\",\n      \"positionHint\": \"주변 물체 기준 상대적 위치 (예: 맥북 오른쪽, 아이폰 아래)\",\n      \"surface\": \"놓인 표면 또는 기준 물체. 예: 맥북 위, 테이블 위 왼쪽. 절대 비워두지 말 것\",\n      \"nearbyObjects\": [\"주변 물체1\", \"주변 물체2\"]\n    }\n  ],\n  \"tags\": [\"검색용 태그 키워드들\"],\n  \"ocrText\": \"보이는 텍스트가 있다면 기록, 없으면 null\",\n  \"positionHint\": \"가장 찾기 쉬운 메인 물체의 종합적 위치 단서\"\n}\n\n규칙:\n- 작거나 부분만 보여도 포함\n- 브랜드 제품은 브랜드명 포함 (예: AirPods, 맥북, 아이패드, Apple Pencil)\n- 태블릿/스마트패드/아이패드도 반드시 포함\n- 같은 종류가 여러 개면 모두 포함 (예: AirPods 케이스가 2개면 \"AirPods 케이스 1\", \"AirPods 케이스 2\")\n- 가구/벽/바닥 제외\n- JSON만 출력\n- 반드시 한국어로",
+  "system_prompt": null,
+  "raw_output_text": "{\n  \"caption\": \"밝은 톤의 나무 테이블 위에 식물 잎과 고양이의 꼬리 부분이 보입니다.\",\n  \"sceneSummary\": \"나무 테이블 위의 식물과 고양이\",\n  \"location\": \"거실\",\n  \"detectedObjects\": [\"식물\", \"고양이\"],\n  \"objects\": [\n    {\n      \"name\": \"식물\",\n      \"positionHint\": \"테이블 왼쪽 끝\",\n      \"surface\": \"테이블 위 왼쪽\",\n      \"nearbyObjects\": [\"테이블\"]\n    },\n    {\n      \"name\": \"고양이\",\n      \"positionHint\": \"테이블 오른쪽 끝\",\n      \"surface\": \"테이블 위 오른쪽\",\n      \"nearbyObjects\": [\"테이블\", \"흰색 쿠션\"]\n    }\n  ],\n  \"tags\": [\"인테리어\", \"반려동물\", \"식물\", \"미니멀\"],\n  \"ocrText\": null,\n  \"positionHint\": \"화면 하단의 나무 테이블 위 양 끝에 식물과 고양이가 위치함\"\n}",
+  "objects": [
+    {
+      "object_id": 1,
+      "name": "식물",
+      "position": {
+        "hint": "테이블 왼쪽 끝",
+        "surface": "테이블 위 왼쪽"
+      },
+      "nearby_objects": [
+        "테이블"
+      ]
+    },
+    {
+      "object_id": 2,
+      "name": "고양이",
+      "position": {
+        "hint": "테이블 오른쪽 끝",
+        "surface": "테이블 위 오른쪽"
+      },
+      "nearby_objects": [
+        "테이블",
+        "흰색 쿠션"
+      ]
+    }
+  ],
+  "scene_info": {
+    "summary": "밝은 톤의 나무 테이블 위에 식물 잎과 고양이의 꼬리 부분이 보입니다."
+  },
+  "pipeline_output": {
+    "capture_id": "ollama-454708899",
+    "timestamp": "2026-07-02T14:27:44.30430872Z",
+    "objects": [
+      {
+        "object_id": 1,
+        "name": "식물",
+        "position": {
+          "hint": "테이블 왼쪽 끝",
+          "surface": "테이블 위 왼쪽"
+        },
+        "nearby_objects": [
+          "테이블"
+        ]
+      },
+      {
+        "object_id": 2,
+        "name": "고양이",
+        "position": {
+          "hint": "테이블 오른쪽 끝",
+          "surface": "테이블 위 오른쪽"
+        },
+        "nearby_objects": [
+          "테이블",
+          "흰색 쿠션"
+        ]
+      }
+    ],
+    "inference_time": 19.195,
+    "done_reason": "stop"
+  },
+  "pipeline_mode": "ollama_adapter"
+}

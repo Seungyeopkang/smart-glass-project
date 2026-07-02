@@ -1,0 +1,2 @@
+image_path,scene_type,target_object,aliases,surface,position_hint,nearby_objects,is_search_worthy,notes
+apps/inference-server/sample_data/example.jpg,desk,wallet,"지갑|검은색 지갑",desk,monitor right side,"keyboard|mouse",yes,replace with real label

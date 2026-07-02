@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "caption": "나무 재질의 서랍장과 그 옆의 어두운 색 가구, 그리고 앞쪽의 침대 시트가 보이는 실내 모습입니다.",
+    "sceneSummary": "침실 내 가구 배치 모습",
+    "detectedObjects": [
+      "서랍장",
+      "침대 시트",
+      "수납장"
+    ],
+    "tags": [
+      "가구",
+      "인테리어",
+      "침실",
+      "서랍장",
+      "침대"
+    ],
+    "ocrText": null,
+    "positionHint": "화면 중앙에 위치한 나무색 서랍장이 메인 물체입니다.",
+    "location": "침실"
+  },
+  "elapsed_sec": 27.7657,
+  "peak_memory_mb": 0.0,
+  "load_time_sec": 0.0,
+  "provider": "ollama",
+  "model_id": "gemma4:31b-cloud",
+  "model_key": "gemma4:31b-cloud",
+  "device": "external-ollama",
+  "quantization": "none",
+  "prompt": "You are a helpful assistant. Always respond in Korean. Output valid JSON only. No code blocks.\n\n이미지를 분석하여 다음 JSON 형식으로 출력하세요. 설명 없이 JSON만 출력하세요.\n\n{\n  \"caption\": \"사진 전체에 대한 한 문장 설명\",\n  \"sceneSummary\": \"전체 장면 10단어 이내 요약\",\n  \"location\": \"공간 유형 (예: 거실, 카페, 사무실)\",\n  \"detectedObjects\": [\"물체1\", \"물체2\"],\n  \"objects\": [\n    {\n      \"name\": \"물체명 (가장 구체적인 이름)\",\n      \"positionHint\": \"주변 물체 기준 상대적 위치 (예: 맥북 오른쪽, 아이폰 아래)\",\n      \"surface\": \"놓인 표면 또는 기준 물체. 예: 맥북 위, 테이블 위 왼쪽. 절대 비워두지 말 것\",\n      \"nearbyObjects\": [\"주변 물체1\", \"주변 물체2\"]\n    }\n  ],\n  \"tags\": [\"검색용 태그 키워드들\"],\n  \"ocrText\": \"보이는 텍스트가 있다면 기록, 없으면 null\",\n  \"positionHint\": \"가장 찾기 쉬운 메인 물체의 종합적 위치 단서\"\n}\n\n규칙:\n- 작거나 부분만 보여도 포함\n- 브랜드 제품은 브랜드명 포함 (예: AirPods, 맥북, 아이패드, Apple Pencil)\n- 태블릿/스마트패드/아이패드도 반드시 포함\n- 같은 종류가 여러 개면 모두 포함 (예: AirPods 케이스가 2개면 \"AirPods 케이스 1\", \"AirPods 케이스 2\")\n- 가구/벽/바닥 제외\n- JSON만 출력\n- 반드시 한국어로",
+  "system_prompt": null,
+  "raw_output_text": "{\n  \"caption\": \"나무 재질의 서랍장과 그 옆의 어두운 색 가구, 그리고 앞쪽의 침대 시트가 보이는 실내 모습입니다.\",\n  \"sceneSummary\": \"침실 내 가구 배치 모습\",\n  \"location\": \"침실\",\n  \"detectedObjects\": [\"서랍장\", \"침대 시트\", \"수납장\"],\n  \"objects\": [\n    {\n      \"name\": \"서랍장\",\n      \"positionHint\": \"침대 시트 뒤쪽\",\n      \"surface\": \"바닥 위\",\n      \"nearbyObjects\": [\"침대 시트\", \"수납장\"]\n    },\n    {\n      \"name\": \"침대 시트\",\n      \"positionHint\": \"서랍장 앞쪽\",\n      \"surface\": \"침대 위\",\n      \"nearbyObjects\": [\"서랍장\"]\n    },\n    {\n      \"name\": \"수납장\",\n      \"positionHint\": \"서랍장 오른쪽\",\n      \"surface\": \"바닥 위\",\n      \"nearbyObjects\": [\"서랍장\"]\n    }\n  ],\n  \"tags\": [\"가구\", \"인테리어\", \"침실\", \"서랍장\", \"침대\"],\n  \"ocrText\": null,\n  \"positionHint\": \"화면 중앙에 위치한 나무색 서랍장이 메인 물체입니다.\"\n}",
+  "objects": [
+    {
+      "object_id": 1,
+      "name": "서랍장",
+      "position": {
+        "hint": "침대 시트 뒤쪽",
+        "surface": "바닥 위"
+      },
+      "nearby_objects": [
+        "침대 시트",
+        "수납장"
+      ]
+    },
+    {
+      "object_id": 2,
+      "name": "침대 시트",
+      "position": {
+        "hint": "서랍장 앞쪽",
+        "surface": "침대 위"
+      },
+      "nearby_objects": [
+        "서랍장"
+      ]
+    },
+    {
+      "object_id": 3,
+      "name": "수납장",
+      "position": {
+        "hint": "서랍장 오른쪽",
+        "surface": "바닥 위"
+      },
+      "nearby_objects": [
+        "서랍장"
+      ]
+    }
+  ],
+  "scene_info": {
+    "summary": "나무 재질의 서랍장과 그 옆의 어두운 색 가구, 그리고 앞쪽의 침대 시트가 보이는 실내 모습입니다."
+  },
+  "pipeline_output": {
+    "capture_id": "ollama-454775430",
+    "timestamp": "2026-07-02T14:28:59.40620672Z",
+    "objects": [
+      {
+        "object_id": 1,
+        "name": "서랍장",
+        "position": {
+          "hint": "침대 시트 뒤쪽",
+          "surface": "바닥 위"
+        },
+        "nearby_objects": [
+          "침대 시트",
+          "수납장"
+        ]
+      },
+      {
+        "object_id": 2,
+        "name": "침대 시트",
+        "position": {
+          "hint": "서랍장 앞쪽",
+          "surface": "침대 위"
+        },
+        "nearby_objects": [
+          "서랍장"
+        ]
+      },
+      {
+        "object_id": 3,
+        "name": "수납장",
+        "position": {
+          "hint": "서랍장 오른쪽",
+          "surface": "바닥 위"
+        },
+        "nearby_objects": [
+          "서랍장"
+        ]
+      }
+    ],
+    "inference_time": 27.766,
+    "done_reason": "stop"
+  },
+  "pipeline_mode": "ollama_adapter"
+}
