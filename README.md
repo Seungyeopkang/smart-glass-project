@@ -24,53 +24,7 @@ To overcome the hardware limitations of wearable devices (such as battery life a
 *   **Conversational UI with Fallback:** Provides a natural language chat interface with a rule-based template fallback path when external LLM APIs fail or return unusable answers.
 *   **Unified Monorepo Structure:** Consolidates frontend, backend, AI models, and infrastructure management into a single repository for efficient continuous integration.
 
-## 3. AI Pipeline Evaluation Plan
-
-The repository includes lightweight experiment utilities under `docs/experiments/`.
-
-```bash
-python docs/experiments/evaluate_portfolio_results.py
-```
-
-The current repository includes two evaluation utilities:
-
-- `evaluate_portfolio_results.py`: smoke-checks existing `ai_test2/` artifacts.
-- `evaluate_sample_data_vlm.py`: runs VLM extraction over existing `sample_data`
-  images with filename-derived weak labels.
-
-The first sample-data run used 10 existing images (`wallet_*` 5 + `key_*` 5).
-This is a preliminary weak-label benchmark, not a final manually labeled test.
-
-| Metric | Result |
-|---|---:|
-| Evaluated images | 10 |
-| Successful VLM outputs | 10 / 10 |
-| Overall weak-label recall | 50.0% |
-| Wallet weak-label recall | 80.0% |
-| Key weak-label recall | 20.0% |
-| Average VLM latency | 27.216 sec |
-
-The results suggest that wallet-like objects are detected more reliably than
-small key-like objects in the current VLM prompt/output path. A larger 100-image
-run and manual labels should replace these preliminary values before treating
-them as final performance numbers.
-
-Planned evaluation:
-
-| Area | Metric |
-|---|---|
-| VLM extraction | object precision/recall against manually labeled images |
-| Spatial memory | surface / position-hint / nearby-object correctness |
-| Multi-pass prompting | single-pass vs. multi-pass ablation |
-| Retrieval | Top-k hit rate for natural-language item queries |
-| Answering | grounded answer correctness and citation validity |
-| Runtime | inference latency and end-to-end query latency |
-
-The measured sample artifacts were generated through the Ollama/Gemma path
-(`gemma4:31b-cloud`), while the repository also includes a separate Qwen2.5-VL
-multi-stage inference implementation for local/server-side deployment.
-
-## 4. System Architecture
+## 3. System Architecture
 
 ![System Architecture Diagram](figures/system_architecture.png)
 
@@ -88,7 +42,7 @@ The architecture is systematically divided into three main layers:
     *   `inference-server`: Celery worker node dedicated to VLM image analysis.
     *   `LLM Engine`: Cloud-based LLM APIs utilized for generating natural language feedback.
 
-## 5. Repository Layout
+## 4. Repository Layout
 
 ```text
 smart-glass-project/
@@ -113,14 +67,14 @@ smart-glass-project/
 `-- .github/                # GitHub Actions CI/CD workflows
 ```
 
-## 6. Prerequisites
+## 5. Prerequisites
 
 *   Docker and Docker Compose
 *   Node.js (v22.22.2 recommended for client development)
 *   Python 3.12 (for local backend development)
 *   Object Storage Credentials (S3-compatible API, e.g., Naver Cloud Object Storage)
 
-## 7. Local Development Environment
+## 6. Local Development Environment
 
 The recommended approach for local development is using Docker Compose at the repository root. This initiates `postgres`, `redis`, `api-server`, `inference-api`, and `inference-worker`.
 
@@ -154,7 +108,7 @@ The repository includes a `Makefile` for streamlined development operations:
 *   `make lint`: Run code linters.
 *   `make smoke-inference-qwen`: Execute VLM smoke tests.
 
-## 8. Production Deployment
+## 7. Production Deployment
 
 The production compose stack delegates both VLM inference and chat responses to Ollama Cloud, allowing the inference worker to run on a standard CPU-only instance.
 
@@ -172,14 +126,14 @@ docker compose -f infra/compose/docker-compose.prod.yml up --build -d
 ```
 Once initialized, the public API gateway will be accessible on port `8002`.
 
-## 9. CI/CD Pipeline
+## 8. CI/CD Pipeline
 
 Continuous Integration is managed via GitHub Actions (`.github/workflows/ci.yml`). The pipeline currently enforces:
 *   **Python Unit Tests:** Runs `unittest` suites for the `api-server` backend.
 *   **TypeScript Validation:** Runs `tsc --noEmit` type checking for the `smart-glass-client`.
 *   **Script Smoke Tests:** Verifies syntax compilation for critical operational scripts.
 
-## 10. Contributors
+## 9. Contributors
 
 *   **Smart Memory Team** - Kyonggi University (2026 Capstone Design)
     *   Seungyeop Kang (Team Leader, AI/VLM)
