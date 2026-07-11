@@ -1,0 +1,172 @@
+{
+  "overall": {
+    "samples": 10,
+    "correct": 4,
+    "recall_pct": 40.0,
+    "avg_latency_sec": 27.112
+  },
+  "by_label": {
+    "key": {
+      "samples": 5,
+      "correct": 0,
+      "recall_pct": 0.0
+    },
+    "wallet": {
+      "samples": 5,
+      "correct": 4,
+      "recall_pct": 80.0
+    }
+  },
+  "rows": [
+    {
+      "image": "key_1",
+      "label": "key",
+      "detected_names": [
+        "식물",
+        "고양이",
+        "식물",
+        "고양이"
+      ],
+      "matched_alias": null,
+      "correct": false,
+      "latency_sec": 19.1948
+    },
+    {
+      "image": "key_10",
+      "label": "key",
+      "detected_names": [
+        "모니터",
+        "키보드",
+        "스피커",
+        "모니터 받침대",
+        "멀티탭",
+        "물티슈",
+        "모니터",
+        "키보드",
+        "스피커",
+        "모니터 받침대",
+        "멀티탭",
+        "물티슈"
+      ],
+      "matched_alias": null,
+      "correct": false,
+      "latency_sec": 30.6648
+    },
+    {
+      "image": "key_11",
+      "label": "key",
+      "detected_names": [
+        "모니터",
+        "수납장",
+        "이불",
+        "모니터",
+        "수납장",
+        "이불"
+      ],
+      "matched_alias": null,
+      "correct": false,
+      "latency_sec": 16.5761
+    },
+    {
+      "image": "key_12",
+      "label": "key",
+      "detected_names": [
+        "서랍장",
+        "침대 시트",
+        "수납장",
+        "서랍장",
+        "침대 시트",
+        "수납장"
+      ],
+      "matched_alias": null,
+      "correct": false,
+      "latency_sec": 27.7657
+    },
+    {
+      "image": "key_13",
+      "label": "key",
+      "detected_names": [
+        "디자인 의자",
+        "바구니",
+        "비닐봉지",
+        "디자인 의자",
+        "바구니",
+        "비닐봉지"
+      ],
+      "matched_alias": null,
+      "correct": false,
+      "latency_sec": 17.1401
+    },
+    {
+      "image": "wallet_1",
+      "label": "wallet",
+      "detected_names": [
+        "모서리 보호대",
+        "자전거",
+        "선풍기",
+        "모서리 보호대",
+        "자전거",
+        "선풍기"
+      ],
+      "matched_alias": null,
+      "correct": false,
+      "latency_sec": 24.1984
+    },
+    {
+      "image": "wallet_10",
+      "label": "wallet",
+      "detected_names": [
+        "지갑",
+        "검은색 가죽 지갑"
+      ],
+      "matched_alias": "지갑",
+      "correct": true,
+      "latency_sec": 23.002
+    },
+    {
+      "image": "wallet_11",
+      "label": "wallet",
+      "detected_names": [
+        "검은색 지갑",
+        "전선",
+        "검은색 지갑",
+        "전선"
+      ],
+      "matched_alias": "지갑",
+      "correct": true,
+      "latency_sec": 33.9095
+    },
+    {
+      "image": "wallet_12",
+      "label": "wallet",
+      "detected_names": [
+        "지갑",
+        "전선",
+        "남색 지갑",
+        "검은색 전선"
+      ],
+      "matched_alias": "지갑",
+      "correct": true,
+      "latency_sec": 23.5483
+    },
+    {
+      "image": "wallet_13",
+      "label": "wallet",
+      "detected_names": [
+        "파란색 지갑",
+        "신발",
+        "자전거 바퀴",
+        "선풍기",
+        "전원 케이블",
+        "파란색 지갑",
+        "신발",
+        "자전거 바퀴",
+        "선풍기",
+        "전원 케이블"
+      ],
+      "matched_alias": "지갑",
+      "correct": true,
+      "latency_sec": 55.1169
+    }
+  ]
+}
